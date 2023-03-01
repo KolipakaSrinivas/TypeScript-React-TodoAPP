@@ -2,6 +2,8 @@ import React from 'react'
 import './styles.css'
 import { useRef } from 'react';
 
+import './styles.css'
+
 
 
 
@@ -24,11 +26,11 @@ function InputField({todo,setTodo,handlesubmit}:props) {
   
   return (
     <div>
-       <form className="input" onSubmit={(e)=>{
-        
-
+       <form className="input" onSubmit={(e)=> { 
+        handlesubmit(e) 
         inputref.current?.blur()
-        handlesubmit}}>
+        
+        }}>
       <input
         ref={inputref}
         type="text"

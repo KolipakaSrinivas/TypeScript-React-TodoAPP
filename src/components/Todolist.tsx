@@ -1,16 +1,19 @@
 import React from 'react'
-import { Todos } from './model';
+import { Todo } from './model';
+import SingleTodos from './SingleTodos';
+
+
 
 interface props {
-    todos:Todos[];
-    setTodos:React.Dispatch<React.SetStateAction<Todos[]>>;
+    todos:Todo[];
+    setTodos:React.Dispatch<React.SetStateAction<Todo[]>>;
 }
 
 function Todolist({todos,setTodos}:props) {
   return (
     <div className='todos'>
 
-        {todos && todos.map(t=><li>{t.isdone}</li>)}
+        {todos && todos.map(todo => <SingleTodos todo={todo} todos={todos} setTodo={setTodos} key={todo.id} />)}
 
 
     </div>

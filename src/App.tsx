@@ -3,18 +3,18 @@ import React, { useRef, useState } from 'react'
 
 import InputField from './components/InputField';
 import Todolist from './components/Todolist';
-import { Todos } from './components/model';
+import { Todo } from './components/model';
 
 
 const  App : React.FC  =() => {
 
 
   const [todo,setTodo] = React.useState <string>('')
-  const [todos,setTodos] = React.useState<Todos[]>([])
+  const [todos,setTodos] = React.useState<Todo[]>([])
 
  
 
-  // console.log(todos)
+  console.log(todo)
 
 
 
