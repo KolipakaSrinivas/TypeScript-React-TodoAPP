@@ -6,14 +6,14 @@ import SingleTodos from './SingleTodos';
 
 interface props {
     todos:Todo[];
-    setTodos:React.Dispatch<React.SetStateAction<Todo[]>>;
+    setTodos:React.Dispatch<React.SetStateAction<Todo[]>>
 }
 
 function Todolist({todos,setTodos}:props) {
   return (
     <div className='todos'>
 
-        {todos && todos.map(todo => <SingleTodos todo={todo} todos={todos} setTodo={setTodos} key={todo.id} />)}
+        {todos && todos.map(todo => <SingleTodos todo={todo} todos={todos} setTodos={setTodos} key={todo.id} />)}
 
 
     </div>

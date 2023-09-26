@@ -3,18 +3,24 @@ import {AiFillDelete,AiFillEdit} from 'react-icons/ai'
 import {MdDone} from 'react-icons/md'
 
 import { Todo } from './model'
+// import Todolist from './Todolist'
 
 type props  = {
     todo : Todo;
     todos:Todo[];
-    setTodo:React.Dispatch<React.SetStateAction<Todo[]>>;
+    setTodos:React.Dispatch<React.SetStateAction<Todo[]>>;
     
 }
 
-function SingleTodos({todo,setTodo,todos}:props) {
+const handleClick = (id:number) => {
+
+
+}
+
+function SingleTodos({todo,setTodos,todos}:props) {
   return (
     <div className='todos__single'>
-        <span className='todos__single--text'>{todo.isdone}</span>
+        <span className='todos__single--text'>{todo.todo}</span>
         <span className='icon'>
             <AiFillEdit/>
 
@@ -23,7 +29,7 @@ function SingleTodos({todo,setTodo,todos}:props) {
             <AiFillDelete/>
             
         </span>
-        <span className='icon'>
+        <span className='icon' onClick={()=>handleClick(todo.id)}>
             <MdDone/>
             
         </span>
